@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    /* outline: 1px solid red; */
+}
+
+:root{
+    /* Primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue-hover: hsl(245, 80%, 63%);;
+    
+    /* Neutral */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+    background-color: var(--pale-blue);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+body p{
+    font-size: 16px;
+}
+
+.component-wrapper{
+    margin: 0px 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-wrapper{
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.hero-image img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.card-content{
+    padding: 22px;
+}
+
+.card-content h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.card-content p{
+    text-align: center;
+    font-weight: 500;
+    color: var(--desaturated-blue);
+}
+
+.subscribtion-wrapper{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+}
+
+.sub-logo{
+    display: flex;
+    align-items: center;
+}
+
+.sub-option h2{
+    color: var(--dark-blue);
+    font-size: 0.95rem;
+    font-weight: 900;
+    margin-bottom: 3px;
+}
+
+.sub-option p{
+    color: var(--desaturated-blue);
+    font-size: 0.9rem;
+}
+
+.sub-change a{
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--bright-blue)
+}
+
+.sub-change a:hover{
+    text-decoration: none;
+    color: var(--bright-blue-hover);
+}
+
+.button-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.button-proceed{
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bright-blue);
+    color: white;
+    font-weight: 700;
+    font-size: .95rem;
+    margin-bottom: 25px;
+    box-shadow: rgba(56, 41, 224, 0.3) 0px 8px 24px;
+}
+
+.button-proceed:hover{
+    background-color: var(--bright-blue-hover);
+    cursor: pointer;
+}
+
+.cancel-order{
+    color: var(--desaturated-blue);
+    font-weight: 900;
+    font-size: 0.95rem;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+.cancel-order:hover{
+    color: var(--dark-blue)
+}
+
+@media only screen and (min-width: 500px){
+    body{
+        display: flex;
+	    min-height: 100vh;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+        background-repeat:repeat-x;
+    }
+
+    .component-wrapper{
+        margin: 0 0;
+    }
+}
+
+@media only screen and (min-width: 960px){
+    body{
+        background-image: url("./images/pattern-background-desktop.svg");
+        background-repeat:repeat-x;
+    }
+}
